@@ -21,5 +21,5 @@ StyleNormalPtr<AudioFlicker<LocalizedClash<Blast<Lockup<GhostWhite,RandomPerLEDF
 { "YELLOW", "tracks/mars.wav",
 StylePtr<InOutHelper<EASYBLADE(OnSpark<GREEN>, YELLOW), 300, 800> >(), "Kyber \n Yellow"},
 
-{ "lmeat", "tracks/gull.wav",
+{ "YELLOW", "tracks/gull.wav",
 &style_charging, "Battery \n Level"},

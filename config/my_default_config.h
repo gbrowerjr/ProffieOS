@@ -59,12 +59,12 @@ const unsigned int maxLedsPerStrip = 144;
 //#define FETT263_TWIST_ON_NO_BM
 //
 //                                              Stab... pick one
-#define FETT263_STAB_ON
+//#define FETT263_STAB_ON
 //#define FETT263_STAB_ON_PREON
 //#define FETT263_STAB_ON_NO_BM
 //
 //                                              Thrust... pick one
-#define FETT263_THRUST_ON
+//#define FETT263_THRUST_ON
 //#define FETT263_THRUST_ON_PREON
 //#define FETT263_THRUST_ON_NO_BM
 
@@ -80,7 +80,7 @@ const unsigned int maxLedsPerStrip = 144;
 
 Preset presets[] = {
 #include "styles/Sith.h"    
-//#include "styles/HeroBlades.h"
+#include "styles/HeroBlades.h"
 #include "styles/GraflexBlades.h"
 //#include "styles/Grievous.h"
 #include "styles/StockBlades.h"    
