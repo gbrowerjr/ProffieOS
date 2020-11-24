@@ -81,11 +81,11 @@ const unsigned int maxLedsPerStrip = 144;
 #ifdef CONFIG_PRESETS
 
 Preset presets[] = {
-#include "styles/Sith.h"    
-#include "styles/HeroBlades.h"
-#include "styles/GraflexBlades.h"
-//#include "styles/Grievous.h"
-#include "styles/StockBlades.h"    
+#include "styles/Sith.h" // Add Sith styles    
+//#include "styles/HeroBlades.h" // Add hero styles with crystal chamber and 2 control box LEDs
+#include "styles/JediBlades.h" // Add Jedi styles
+//#include "styles/Grievous.h" // Add Grievous styles
+#include "styles/StockBlades.h"  // Add Kyber workshop styles  
 };
 
 BladeConfig blades[] = {
