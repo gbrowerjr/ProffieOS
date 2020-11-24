@@ -6,10 +6,10 @@
 
 #ifdef CONFIG_TOP
 // #include "proffieboard_v2_config.h"
-#include "proffieboard_config.h"
+#include "proffieboard_config.h" // Chooses correct config for your board
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
-#define VOLUME 1500 // rear facing SE speaker-1500, forward facing SE speaker-1300
+#define VOLUME 1800 // rear facing SE speaker-1500, forward facing SE speaker-1300
 const unsigned int maxLedsPerStrip = 144;
 #define CLASH_THRESHOLD_G 3.0 // rear facing speaker-2.0, forward facing speaker-3.0
 #define ENABLE_AUDIO
@@ -18,10 +18,10 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_SD
 #define ENABLE_SERIAL
 #define KEEP_SAVEFILES_WHEN_PROGRAMMING
-#define SAVE_STATE // saves preset, vol and color change
+//#define SAVE_STATE // saves preset, vol and color change
 // #define SAVE_PRESET
 // define SAVE_VOLUME
-// #define SAVE_COLOR_CHANGE
+#define SAVE_COLOR_CHANGE
 // #define DISABLE_COLOR_CHANGE
 #define IDLE_OFF_TIME 16000 // time before deep sleep 
 //
@@ -29,11 +29,20 @@ const unsigned int maxLedsPerStrip = 144;
 //#define BLE_PASSWORD "625656" // Max 32 characters.
 //#define BLE_NAME "Graflex1" // Max 9 characters
 //#define BLE_SHORTNAME "Saber"
-//#define ENABLE_SSD1306 // 
+//#define ENABLE_SSD1306 // lcd screen
+//#define OLED_FLIP_180 //flip screen 180 degrees
 #define SHARED_POWER_PINS
 #define ENABLE_POWER_FOR_ID PowerPINS<bladePowerPin1, bladePowerPin2, bladePowerPin3>
 #define DISABLE_DIAGNOSTIC_COMMANDS
-#define COLOR_CHANGE_DIRECT // each click changes colors
+//#define COLOR_CHANGE_DIRECT // each click changes colors
+//
+//                                          Board Orientation
+// Use if axis isn't responding correctly
+//#define ORIENTATION ORIENTATION_NORMAL
+//#define ORIENTATION ORIENTATION_FETS_TOWARDS_BLADE
+//#define ORIENTATION ORIENTATION_USB_TOWARDS_BLADE
+//#define ORIENTATION ORIENTATION_TOP_TOWARDS_BLADE
+//#define ORIENTATION ORIENTATION_BOTTOM_TOWARDS_BLADE
 //
 //                                          FET263 Buttons defines
 //
@@ -47,8 +56,8 @@ const unsigned int maxLedsPerStrip = 144;
 #define FETT263_BM_DISABLE_OFF_BUTTON
 //#define FETT263_FORCE_PUSH
 #define FETT263_FORCE_PUSH_ALWAYS_ON
-// #define FETT263_FORCE_PUSH_LENGTH 5
-#define FETT263_MULTI_PHASE
+#define FETT263_FORCE_PUSH_LENGTH 5
+//#define FETT263_MULTI_PHASE
 #define MOTION_TIMEOUT 60 * 15 * 1000
 //                                           swing on.... pick one
 #define FETT263_SWING_ON
